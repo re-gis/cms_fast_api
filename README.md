@@ -30,7 +30,7 @@ source bin/activate
 
 ### 2.RUN THE PROJECT
 ```bash
-python manage.py runserver <port>
+uvicorn cms.main:app --reload
 ```
 
 #### Made by D Regis
