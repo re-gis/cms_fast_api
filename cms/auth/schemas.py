@@ -8,6 +8,10 @@ class CustomUserBase(BaseModel):
 class CustomUserCreate(CustomUserBase):
     password: str
     role: str
+    
+class Login(BaseModel):
+    email: str
+    password: str
 
 class CustomUserResponse(CustomUserBase):
     id: int

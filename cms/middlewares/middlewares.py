@@ -47,7 +47,7 @@ ADMIN_ROLE = "admin"
 
 def admin_required(current_user: CustomUser = Depends(get_current_user)):
     print(current_user.role)
-    if current_user.role != ADMIN_ROLE:
+    if current_user.role != ADMIN_ROLE and current_user.role != "ADMIN" and current_user.role != "Admin":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You do not have permission to create a project. Admin role is required.",
